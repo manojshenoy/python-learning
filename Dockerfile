@@ -7,6 +7,11 @@ USER app_user
 COPY . .
 USER root
 RUN cp -a /home/app_user/calc.py /usr/bin/calc
+RUN cp -a /home/app_user/decades.py /usr/bin/decades
+RUN cp -a /home/app_user/rockgame.py /usr/bin/rockgame
 RUN chmod a+x /home/app_user/calc.py
+RUN chmod a+x /home/app_user/decades.py
+RUN chmod a+x /home/app_user/rockgame.py
+
 USER app_user
 CMD ["bash"]
